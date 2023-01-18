@@ -1,0 +1,2 @@
+Når runtime.GOMAXPROCS(n) har n = 1 så vil det kun brukes en CPU (Kjerne?) som fører til at det vil bli en seriell håndtering av programmet. Først inkrementering så dekrementering og de utføres da ikke parallelt. Derfor blir resultatet 0. 
+Når n = 2 brukes flere gjerner og gorutine vil kjøre parallelt. Da vil i bli en delt variabel og begge funksjonene endrer på samme variabel samtidig. Dette fører til kaos og feil verdier! Runtime error. 
